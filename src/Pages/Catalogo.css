@@ -1,0 +1,20 @@
+.div-catalogo{
+    background-color: #D9CDBF;
+    color: black;
+    .div-categorias{
+        border: 2px red solid;
+        padding: 10px;
+    }
+    .div-cardproducts{
+        border: 2px lawngreen solid;
+        padding: 10px;
+        display: flex;  
+
+    }
+    .div-paging{
+        border: 2px blueviolet solid;
+        padding: 10px;
+        justify-items: center;
+
+    }
+}

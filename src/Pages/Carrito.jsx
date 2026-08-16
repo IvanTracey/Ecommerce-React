@@ -1,8 +1,9 @@
 import React from 'react'
+import './Carrito.css'
 
 function Carrito() {
   return (
-    <div>Carrito</div>
+    <div className='div-carrito'>Carrito</div>
   )
 }
 

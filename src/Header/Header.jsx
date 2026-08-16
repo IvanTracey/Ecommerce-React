@@ -7,7 +7,7 @@ function Header() {
     <div className='header'>
       <div className='div-titulo'>
         <img src="../../img/logo_colibri.webp" alt="Logo de pagina" className='logo'/>
-        <h1>Buena vibra</h1>
+        <h1><a href="./">Buenas vibras</a></h1>
       </div>
     <NavBar></NavBar>
     </div>

@@ -1,14 +1,24 @@
 .header{
-    background-color: rgb(164, 110, 44);
+    background-color: #bbd9b6;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    height: 10vh;
     .div-titulo{
         display: flex;
-        color: black;
+        h1{
+            font-size: 42px;
+            font-weight: bold;
+            color: black;
+            padding-left: 20px;
+            a{
+                text-decoration: none;
+                color: black;
+            }
+        }
     }
     .logo{
         height: 70px;
+        padding-left: 20px;
     }
 }

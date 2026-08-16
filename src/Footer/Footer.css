@@ -1,9 +1,9 @@
 .footer{
-    background-color: rgb(164, 110, 44);
+    background-color: #bbd9b6;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    height: 10vh;
 
     .div-footer{
         color: black;

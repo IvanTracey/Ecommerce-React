@@ -4,10 +4,12 @@ import { Routes, Route } from 'react-router-dom'
 // Importar componenetes
 import Header from './Header/Header.jsx'
 import Footer from './Footer/Footer.jsx'
-import Productos from './Pages/Productos.jsx'
+import Catalogo from './Pages/Catalogo.jsx'
 import Carrito from './Pages/Carrito.jsx'
 import Error404 from './Pages/Error404.jsx'
 import './App.css'
+import Productos from './Productos.jsx'
+
 
 function App() {
   
@@ -15,7 +17,8 @@ function App() {
     <>
     <Header></Header>
     <Routes>
-      <Route path='/productos' element={<Productos/>}></Route>
+      <Route path='/' element={<Catalogo/>}></Route>
+      <Route path='/producto/:id' element={<Productos/>}></Route>
       <Route path='/carrito' element={<Carrito/>}></Route>
       <Route path='/*' element={<Error404/>}></Route>
     </Routes>
