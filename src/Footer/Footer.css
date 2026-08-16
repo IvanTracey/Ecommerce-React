@@ -1,0 +1,19 @@
+.footer{
+    background-color: rgb(164, 110, 44);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+    .div-footer{
+        color: black;
+        justify-items: left;
+    }
+    .div-redes{
+        display: flex;
+        .logo{
+            height: 40px;
+            padding: 10px;
+        }
+    }
+}

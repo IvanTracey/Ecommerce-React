@@ -1,0 +1,8 @@
+.lista{
+    font-weight: bold;
+    .item{
+        text-decoration: none;
+        padding: 25px;
+        color: black;
+    }
+}

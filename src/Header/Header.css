@@ -1,0 +1,14 @@
+.header{
+    background-color: rgb(164, 110, 44);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    .div-titulo{
+        display: flex;
+        color: black;
+    }
+    .logo{
+        height: 70px;
+    }
+}
