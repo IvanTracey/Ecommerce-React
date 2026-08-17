@@ -8,7 +8,7 @@ export default function ContainedButtons() {
   return (
     <div className='categorias'>
       {categorias.map(categoria => (  
-        <Button className="botones-cat" variant="contained" 
+        <Button key={categoria} className="botones-cat" variant="contained" 
             sx={{
                 bgcolor: '#bbd9b6', 
                 color: '#000000', 
