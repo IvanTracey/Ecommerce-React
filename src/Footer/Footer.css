@@ -3,14 +3,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10vh;
 
     .div-footer{
         color: black;
         justify-items: left;
+        padding: 10px 30px;
+
     }
     .div-redes{
         display: flex;
+        padding-right: 30px;
         .logo{
             height: 40px;
             padding: 10px;
