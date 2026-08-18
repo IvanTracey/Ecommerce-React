@@ -1,7 +1,8 @@
 import React from 'react'
-import Productos from '../Productos';
+import Productos from '../Productos'
+import ItemListContainer from '../Components/ItemListContainer'
 import Categorias from '../Components/Categorias'
-import Paginacion from '../Components/Paginacion';
+import Paginacion from '../Components/Paginacion'
 import './Catalogo.css'
 
 function Catalogo (){
@@ -11,7 +12,7 @@ function Catalogo (){
             <Categorias></Categorias>
         </div>
         <div className='div-cardproducts'>
-            <Productos></Productos>
+             <ItemListContainer></ItemListContainer>
         </div>
         <div className="div-paging">
             <Paginacion></Paginacion>

@@ -6,7 +6,8 @@
     }
     .div-cardproducts{
         padding: 10px;
-        display: flex;  
+        border: 2px yellow solid;
+        display: flex;
 
     }
     .div-paging{
