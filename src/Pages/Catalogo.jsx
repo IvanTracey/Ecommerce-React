@@ -14,9 +14,6 @@ function Catalogo (){
         <div className='div-cardproducts'>
              <ItemListContainer></ItemListContainer>
         </div>
-        <div className="div-paging">
-            <Paginacion></Paginacion>
-        </div>
     </div>
   )
 }
