@@ -1,10 +1,34 @@
 .card{
     background-color: #bbd9b6;
-    border: 1px black solid;
-    border-radius: 8px;
-    padding: 5px;
+    justify-items: center;
+    text-align: center;
+    margin: 8px;
+    padding: 10px;   
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.4s ease; 
     .card-img{
-        height: 300px;
-        width: 250px;
+        height: auto;
+        width: 100%;
+        aspect-ratio: 1/1; 
+        object-fit: cover;
+    }
+    .div-nombre{
+        height: 50px;
+    }
+    .div-descripcion{
+        height: 50px;
+    }
+    .div-precio{
+        h4{
+            font-size: 24px;
+        }
+    }
+    .div-botonera{
+        display: flex;
+        gap: 10px;
+        .boton{
+            padding: 5px 10px;
+        }
     }
 }
