@@ -17,9 +17,10 @@ function Card({ producto }) {
   // Visualizacion de detalles
   const [visible_det, setVisible_det] = useState(false);
   const texto = visible_det ? "Ocultar" : "Detalles";
-  const desmontarComponente = () => {
+  const mostrarDetalles = () => {
     setVisible_det(!visible_det);
   }
+
   return (
     <div className="card">
       <img className='card-img' src={producto.img} alt={producto.nombre} />
@@ -28,7 +29,7 @@ function Card({ producto }) {
       </div>
       <div className="div-descripcion">
         {visible_det ? <p>{producto.descripcion}</p> : ""}
-        <button onClick={desmontarComponente}>{texto}</button>
+        <button onClick={mostrarDetalles}>{texto}</button>
       </div>
       <div className="div-estilos">
         {producto.variedades?.length > 0 && (
@@ -41,8 +42,7 @@ function Card({ producto }) {
             {producto.variedades.map((variedad) => (
                 <option
                     key={variedad.nombre}
-                    value={variedad.nombre}
-                >
+                    value={variedad.nombre}>
                     {variedad.nombre}
                 </option>
             ))}

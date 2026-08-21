@@ -23,7 +23,6 @@ function ItemListContainer() {
 
   return (
     <>
-    // Muestro un recorte del array
       <ItemList productos={productosPagina} />
       <Paginacion
         pagina={pagina}
