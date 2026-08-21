@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Card.css'
 import ItemCount from './ItemCount';
 
@@ -23,10 +24,12 @@ function Card({ producto }) {
 
   return (
     <div className="card">
-      <img className='card-img' src={producto.img} alt={producto.nombre} />
-      <div className="div-nombre">
+      <Link to={`/producto/${producto.id}`} className='link'>
+        <img className='card-img' src={producto.img} alt={producto.nombre} />
         <h3>{producto.nombre}</h3>
-      </div>
+      </Link>
+      
+      
       <div className="div-descripcion">
         {visible_det ? <p>{producto.descripcion}</p> : ""}
         <button onClick={mostrarDetalles}>{texto}</button>
@@ -53,6 +56,8 @@ function Card({ producto }) {
         <h4>${producto.precio}</h4>
       </div>
       <ItemCount key={variedadSeleccionada} stock={stock} />
+
+      
     </div>
   );
 }
