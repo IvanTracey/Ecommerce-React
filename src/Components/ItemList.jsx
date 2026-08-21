@@ -1,7 +1,7 @@
 import Card from '../Components/Card'
 import './ItemList.css'
 
-// Le doy el array de productos y se crea la card para cada producto
+// Le doy el array de productos y lo mapea sacando la infomacion
 function ItemList({ productos }) {
   return (
     <div className="item-list">

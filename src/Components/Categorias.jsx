@@ -1,5 +1,4 @@
 import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
 import './Categorias.css'
 
 export default function ContainedButtons() {
@@ -10,11 +9,11 @@ export default function ContainedButtons() {
       {categorias.map(categoria => (  
         <Button key={categoria} className="botones-cat" variant="contained" 
             sx={{
-                bgcolor: '#bbd9b6', 
+                bgcolor: '#A8B8A5', 
                 color: '#000000', 
                 fontWeight: 'bold',
                 '&:hover': {
-                bgcolor: '#57a349',
+                bgcolor: '#7cc26f',
                 },
         }}>{categoria}</Button>
       ))}

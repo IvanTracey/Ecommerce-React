@@ -3,18 +3,19 @@ import '../../data/productos.json'
 import ItemList from "./ItemList";
 import Paginacion from "./Paginacion";
 
-// Funcion que obtiene el array de productos
 function ItemListContainer() {
   const [productos, setProductos] = useState([]);
   const [pagina, setPagina] = useState(1);
   const porPagina = 9;
 
+// Funcion que obtiene el array de productos
   useEffect(() => {
     fetch('../../data/productos.json')
       .then(res => res.json())
       .then(data => setProductos(data));
   }, []);
 
+  //Parametros de la paginacion
   const indiceFinal = pagina * porPagina;
   const indiceInicial = indiceFinal - porPagina;
   const productosPagina = productos.slice(indiceInicial, indiceFinal);
@@ -22,6 +23,7 @@ function ItemListContainer() {
 
   return (
     <>
+    // Muestro un recorte del array
       <ItemList productos={productosPagina} />
       <Paginacion
         pagina={pagina}

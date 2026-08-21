@@ -1,19 +1,25 @@
 import { useState } from 'react';
-import ItemList from '../Components/ItemList'
 import './Card.css'
+import ItemCount from './ItemCount';
 
 // Creo la estructura de la Card y designo con que informacion la relleno
 function Card({ producto }) {
-  const [contador, setContador]= useState(0);
+  // Variedad seleccionada
+  const [variedadSeleccionada, setVariedadSeleccionada] = useState(producto.variedades?.[0]?.nombre) || "";
 
-  const incrementarCont = () => {
-    setContador(contador + 1);
-  };
-  const decrementarCont = () => {
-    if(contador!=0){
-      setContador(contador - 1);
-    }
-  };
+  //Segun la variedad, traigo el objeto completo
+  const variedad = producto.variedades?.find(
+    (item) => item.nombre === variedadSeleccionada
+  );
+  // Stock que utilizara ItemCount: Si hay variedad seleccionada, usa variedad.stock, si no usa producto.stock, si tampoco existe stock=0
+  const stock = variedad?.stock ?? producto.stock ?? 0;
+
+  // Visualizacion de detalles
+  const [visible_det, setVisible_det] = useState(false);
+  const texto = visible_det ? "Ocultar" : "Detalles";
+  const desmontarComponente = () => {
+    setVisible_det(!visible_det);
+  }
   return (
     <div className="card">
       <img className='card-img' src={producto.img} alt={producto.nombre} />
@@ -21,16 +27,32 @@ function Card({ producto }) {
         <h3>{producto.nombre}</h3>
       </div>
       <div className="div-descripcion">
-        <p>{producto.descripcion}</p>
+        {visible_det ? <p>{producto.descripcion}</p> : ""}
+        <button onClick={desmontarComponente}>{texto}</button>
+      </div>
+      <div className="div-estilos">
+        {producto.variedades?.length > 0 && (
+        <select
+            name="variedad"
+            id={`variedad-${producto.id}`}
+            value={variedadSeleccionada}
+            onChange={(e) => setVariedadSeleccionada(e.target.value)}
+        >
+            {producto.variedades.map((variedad) => (
+                <option
+                    key={variedad.nombre}
+                    value={variedad.nombre}
+                >
+                    {variedad.nombre}
+                </option>
+            ))}
+        </select>
+        )}
       </div>
       <div className='div-precio'>
         <h4>${producto.precio}</h4>
       </div>
-      <div className='div-botonera'>
-        <button className='boton' onClick={decrementarCont}>-</button>
-        <p>{contador}</p>
-        <button className='boton' onClick={incrementarCont}>+</button>
-      </div>
+      <ItemCount key={variedadSeleccionada} stock={stock} />
     </div>
   );
 }
