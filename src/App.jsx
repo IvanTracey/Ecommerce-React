@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 
 // Importar componenetes
@@ -9,7 +8,7 @@ import Carrito from './Pages/Carrito.jsx'
 import Checkout from './Pages/Checkout.jsx'
 import Error404 from './Pages/Error404.jsx'
 import './App.css'
-import Productos from './Productos.jsx'
+import Productos from './Pages/Productos.jsx'
 
 
 function App() {
