@@ -12,7 +12,7 @@ function ItemListContainer() {
   useEffect(() => {
     fetch('../../data/productos.json')
       .then(res => res.json())
-      .then(data => setProductos(data));
+      .then(data => setProductos(data.sort((a, b) => a.nombre.localeCompare(b.nombre))));
   }, []);
 
   //Parametros de la paginacion
