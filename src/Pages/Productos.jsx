@@ -31,7 +31,13 @@ function Productos() {
       <div className="div-info">
         <h2>{producto.nombre}</h2>  
         <p>{producto.descripcion}</p>
+        {producto.variedades?.length > 0 && (
+          <p>
+            Variedades: {producto.variedades.map(v => v.nombre).join(", ")}
+          </p>
+        )}
         <h4>${producto.precio}</h4>
+
         <button>
           <Link to={"/"} className='item'>Volver</Link>
         </button>
