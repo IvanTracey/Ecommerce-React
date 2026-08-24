@@ -3,20 +3,21 @@ import './CardCarrito.css'
 import { CartContext } from '../context/CartContext'
 
 function CardCarrito(){
-    const productoSeleccionado = useContext(CartContext)
+    const {cart} = useContext(CartContext)
     return (
-        <div className='card-carrito'>
-            <img src="producto.img" alt="Imagen de producto" className='imagen'/>
-            <div className="info">
-                <h2>{productoSeleccionado.nombre}</h2>
-                <p>Variedad: x </p>
-                <p>Precio: </p>
-                <p>Cantidad:</p>
+        <div className='div-carrito'>
+            {cart.map(item => (
+            <div className='card-carrito'>
+                <img src={`/${item.img}`} alt="Imagen producto" className='imagen'/>
+                <div className="info" key={`${item.id}-${item.variedad}`}>
+                    <h2>{item.nombre}</h2>
+                    {item.variedad ? <p>Variedad: {item.variedad} </p> : ""}
+                    <p>Precio: ${item.precio}</p>
+                    <p>Cantidad: {item.cantidad}</p>
+                </div>
+                <h4>Precio total: ${item.cantidad*item.precio}</h4>
             </div>
-            <div className="div-precio">
-                <h4>Precio total: </h4>
-                <p>$xxxxx</p>
-            </div>
+            ))}
         </div>
     )
 }

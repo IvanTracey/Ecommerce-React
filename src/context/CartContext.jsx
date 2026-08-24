@@ -28,6 +28,7 @@ export const CartProvider = ({ children }) => {
         producto
       ];
     });
+    {console.log(cart)}
   };
 
   const quitarDelCarrito = (id, variedad) => {

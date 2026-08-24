@@ -28,7 +28,7 @@ function Card({ producto }) {
         <img className='card-img' src={producto.img} alt={producto.nombre} />
         <h3>{producto.nombre}</h3>
       </Link>
-      
+    
       <div className="div-descripcion">
         {visible_det ? <p>{producto.descripcion}</p> : ""}
         <button onClick={mostrarDetalles}>{texto}</button>

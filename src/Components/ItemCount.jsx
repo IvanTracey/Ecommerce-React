@@ -3,6 +3,7 @@ import { CartContext } from "../context/CartContext";
 
 function ItemCount({ producto, variedad, stock }) {
   const [contador, setContador] = useState(0);
+
   // Obtenemos la función del Context
   const {agregarAlCarrito, quitarDelCarrito} = useContext(CartContext);
   const incrementarCont = () => {
@@ -10,22 +11,27 @@ function ItemCount({ producto, variedad, stock }) {
       setContador(contador + 1);
     }
   };
+
   const decrementarCont = () => {
     if (contador > 0) {
       setContador(contador - 1);
     }
   };
+
   const agregarCarrito = () => {
+    if (contador === 0) {
+        return;
+    }
     const productoSeleccionado = {
       id: producto.id,
       nombre: producto.nombre,
+      img: producto.img,
       precio: producto.precio,
       variedad: variedad,
       cantidad: contador
     };
     // Enviamos ese objeto al Context
     agregarAlCarrito(productoSeleccionado);
-    {console.log(productoSeleccionado)}
   };
   return (
     <div>
