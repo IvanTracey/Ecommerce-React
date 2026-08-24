@@ -10,19 +10,18 @@ import Error404 from './Pages/Error404.jsx'
 import './App.css'
 import Productos from './Pages/Productos.jsx'
 
-
 function App() {
   
   return (
     <>
     <Header></Header>
-    <Routes>
-      <Route path='/' element={<Catalogo/>}></Route>
-      <Route path='/producto/:id' element={<Productos/>}></Route>
-      <Route path='/carrito' element={<Carrito/>}></Route>
-      <Route path='/checkout' element={<Checkout/>}></Route>
-      <Route path='/*' element={<Error404/>}></Route>
-    </Routes>
+      <Routes>
+        <Route path='/' element={<Catalogo/>}></Route>
+        <Route path='/producto/:id' element={<Productos/>}></Route>
+        <Route path='/carrito' element={<Carrito/>}></Route>
+        <Route path='/checkout' element={<Checkout/>}></Route>
+        <Route path='/*' element={<Error404/>}></Route>
+      </Routes>
     <Footer></Footer>
     </>
   )

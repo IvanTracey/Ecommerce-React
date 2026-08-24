@@ -1,5 +1,19 @@
 .div-carrito{
     background-color: #D9CDBF;
-    height: 80vh;
     color: black;
+    .header-carrito{
+        display: flex;
+        padding: 20px;
+        justify-content: space-between;
+        align-items: center;
+        h2{
+            font-size: 36px;
+        }
+        p{
+            font-weight: bold;
+            font-size: 24px;
+        }
+    }
+    .body-carrito{
+    }
 }

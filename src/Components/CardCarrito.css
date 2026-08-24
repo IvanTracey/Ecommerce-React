@@ -1,0 +1,28 @@
+.card-carrito{
+    border: 2px rebeccapurple solid;
+    border-radius: 28px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .imagen{
+        border: 2px sandybrown solid;        
+        height: auto;
+        width: 150px;
+        aspect-ratio: 1/1; 
+        object-fit: cover;
+        margin: 20px 40px;
+    }
+    .info{
+        justify-items: left;
+        border: 2px seagreen solid;
+    }
+    .div-precio{
+        h4{
+            margin: 10px 30px;
+        }
+        p{
+            font-weight: bold;
+        }
+    }
+}
