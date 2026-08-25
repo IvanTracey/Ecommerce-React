@@ -4,5 +4,6 @@
     justify-content: center;
     .botones-cat{
         margin: 5px 10px;
+        &:hover{transform: scale(1.05);}
     }
 }

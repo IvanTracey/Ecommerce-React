@@ -2,15 +2,12 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 function ItemCount({ producto, variedad, stock }) {
-  //const [visible_contador, setvisible_contador] = useState(false);
-  // Obtenemos la función del Context
   const {cart, agregarAlCarrito, quitarDelCarrito, modificarCantidad} = useContext(CartContext);
 
   const productoEnCarrito = cart.find(item =>
   item.id === producto.id && item.variedad === variedad);
 
   const agregarCarrito = () => {
-    //setvisible_contador(true)
     const productoSeleccionado = {
       id: producto.id,
       nombre: producto.nombre,
@@ -20,11 +17,6 @@ function ItemCount({ producto, variedad, stock }) {
       cantidad: 1
     };
     agregarAlCarrito(productoSeleccionado);
-
-    console.log(
-            "Cart:",
-            cart
-        );
   };
   
   const sumarProducto = () => {
@@ -42,7 +34,6 @@ function ItemCount({ producto, variedad, stock }) {
   };
 
   const quitarProducto = () => { 
-    //setvisible_contador(false)
     quitarDelCarrito(producto.id, variedad)
   }   
   

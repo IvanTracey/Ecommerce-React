@@ -13,6 +13,7 @@
             width: 100%;
             aspect-ratio: 1/1; 
             object-fit: cover;
+            border-radius: 1px;
         }
             height: 55px;
             text-decoration: none;
@@ -31,6 +32,7 @@
             height: 25px;
             background-color: #A8B8A5;
             border-radius: 8px;
+            &:hover{transform: scale(1.05);}
         }
     }
     .div-estilos{
@@ -50,8 +52,9 @@
     }
     .agregar-carrito{
         background-color: #A8B8A5;
-            border-radius: 8px;
-            padding: 6px;
+        border-radius: 8px;
+        padding: 6px;
+        &:hover{transform: scale(1.05);}
     }
     .div-botonera{
         margin: 10px;
@@ -61,11 +64,13 @@
             padding: 5px 10px;
             background-color: #A8B8A5;
             border-radius: 8px;
+            &:hover{transform: scale(1.05);}
         }
     }    
     .boton{
         padding: 5px 10px;
         background-color: #A8B8A5;
         border-radius: 8px;
+        &:hover{transform: scale(1.05);}
     }
 }

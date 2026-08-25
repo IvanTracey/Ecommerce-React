@@ -4,10 +4,9 @@ import { CartContext } from '../context/CartContext'
 
 function CardCarrito(){
     const {cart} = useContext(CartContext)
-    
     return (
         <div className='div-carrito'>
-            {cart.map(item => (
+        {cart.map(item => (
             <div className='card-carrito'>
                 <img src={`/${item.img}`} alt="Imagen producto" className='imagen'/>
                 <div className="info" key={`${item.id}-${item.variedad}`}>
@@ -18,7 +17,7 @@ function CardCarrito(){
                 </div>
                 <h4>Precio total: ${item.cantidad*item.precio}</h4>
             </div>
-            ))}
+        ))}
         </div>
     )
 }
