@@ -4,12 +4,11 @@ import { CartContext } from '../context/CartContext';
 import CardCarrito from '../Components/CardCarrito';
 
 function Carrito() {
-  const cart = useContext(CartContext)
   return (
     <div className='carrito'>
       <div className="header-carrito">
         <h2>Carrito</h2>
-        <p>TOTAL: $ -  items</p>
+        <p>TOTAL A PAGAR ${} - {} items</p>
       </div>
       <hr />
       <div className="body-carrito">

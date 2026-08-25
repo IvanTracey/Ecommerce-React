@@ -1,13 +1,23 @@
 import { createContext, useState } from "react";
 export const CartContext = createContext();
-// Provider: todo lo que esté dentro de CartProvider podrá acceder al carrito.
+
 export const CartProvider = ({ children }) => {
-  // Acá se guarda la información del carrito
   const [cart, setCart] = useState([]);
 
-// El producto nunca esta en el carrito con anterioridad, se agrega una vez y luego se modifica la cantidad
   const agregarAlCarrito = (producto) => {
     setCart(prevCart => {
+      const productoExistente = prevCart.find(item => item.id === producto.id && item.variedad === producto.variedad);
+      if (productoExistente) {
+        return prevCart.map(item => {
+          if (item.id === producto.id && item.variedad === producto.variedad) {
+            return {
+              ...item,
+              cantidad: item.cantidad + producto.cantidad
+            };
+          }
+          return item;
+        });
+      }
       return [
         ...prevCart,
         producto

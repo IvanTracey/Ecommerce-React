@@ -4,6 +4,7 @@ import { CartContext } from '../context/CartContext'
 
 function CardCarrito(){
     const {cart} = useContext(CartContext)
+    
     return (
         <div className='div-carrito'>
             {cart.map(item => (
