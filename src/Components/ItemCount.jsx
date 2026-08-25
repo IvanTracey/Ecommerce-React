@@ -1,72 +1,66 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 function ItemCount({ producto, variedad, stock }) {
-  const [contador, setContador] = useState(0);
-  const [visible_contador, setvisible_contador] = useState(false);
-  const productoSeleccionado = {}
+  //const [visible_contador, setvisible_contador] = useState(false);
   // Obtenemos la función del Context
-  const {agregarAlCarrito, quitarDelCarrito} = useContext(CartContext);
+  const {cart, agregarAlCarrito, quitarDelCarrito, modificarCantidad} = useContext(CartContext);
+
+  const productoEnCarrito = cart.find(item =>
+  item.id === producto.id && item.variedad === variedad);
 
   const agregarCarrito = () => {
-    setvisible_contador(true)
-    setContador(1)
+    //setvisible_contador(true)
     const productoSeleccionado = {
       id: producto.id,
       nombre: producto.nombre,
       img: producto.img,
       precio: producto.precio,
       variedad: variedad,
-      cantidad: contador
+      cantidad: 1
     };
     agregarAlCarrito(productoSeleccionado);
-    {console.log(producto.id, producto.variedad, productoSeleccionado)}
+
+    console.log(
+            "Cart:",
+            cart
+        );
   };
   
   const sumarProducto = () => {
-    if (contador < stock) {
-      setContador(contador + 1);
+    const nuevaCantidad = productoEnCarrito.cantidad + 1;
+    if (nuevaCantidad <= stock) {
+      modificarCantidad(producto.id, variedad, nuevaCantidad)
     }
-    const productoSeleccionado = {
-      ...productoSeleccionado,
-      cantidad: contador
-    };
-    // Enviamos ese objeto al Context
-    agregarAlCarrito(productoSeleccionado);
   };
 
   const restarProducto = () => {
-    if (contador > 1) {
-      setContador(contador - 1);
+    const nuevaCantidad = productoEnCarrito.cantidad + 1;
+    if (nuevaCantidad <= 1) {
+      modificarCantidad(producto.id, variedad, nuevaCantidad)
     }
-    const productoSeleccionado = {
-      ...productoSeleccionado,
-      cantidad: contador
-    };
-    agregarAlCarrito(productoSeleccionado);
   };
 
   const quitarProducto = () => { 
-    setvisible_contador(false)
-    setContador(0)
-    quitarDelCarrito(producto.id, producto.variedad)
-    {console.log(producto.id, producto.variedad, productoSeleccionado)}
+    //setvisible_contador(false)
+    quitarDelCarrito(producto.id, variedad)
   }   
   
   return (
     <div>
-      {visible_contador ? 
+      {!productoEnCarrito ?
+        <button onClick={agregarCarrito} className="agregar-carrito">Agregar al carrito</button> :
         <div>
           <div className='div-botonera'>  
-            <button className='boton' onClick={restarProducto}  disabled={contador===1}>- </button>
-            <p>{contador}</p>
-            <button className='boton' onClick={sumarProducto} disabled={contador===stock}> + </button>
+            <button className='boton' onClick={restarProducto}  disabled={productoEnCarrito.cantidad === 1}>- </button>
+            <p>{productoEnCarrito.cantidad}</p>
+            <button className='boton' onClick={sumarProducto} disabled={productoEnCarrito.cantidad === stock}> + </button>
           </div>
           <div>
-              <button className='boton' onClick={quitarProducto}> X </button>
+              <button className='boton' onClick={quitarProducto}> Quitar del carrito </button>
           </div>
-        </div> : 
-        <button onClick={agregarCarrito} className='agregar-carrito'> Agregar al carrito</button>}      
+        </div>
+      }
     </div>
   );
 }
