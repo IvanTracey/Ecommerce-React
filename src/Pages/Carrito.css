@@ -1,17 +1,22 @@
 .carrito{
     background-color: #D9CDBF;
     color: black;
+    min-height: 80vh;
     .header-carrito{
         display: flex;
         margin: 30px;
         justify-content: space-between;
         align-items: center;
         h2{
-            font-size: 36px;
+            font-size: 46px;
         }
         p{
             font-weight: bold;
             font-size: 24px;
+            background-color: #A8B8A5;
+            padding: 20px;
+            border: 1px black solid;
+            border-radius: 18px;
         }
     }
     .body-carrito{
@@ -21,7 +26,7 @@
         button{
             background-color: #A8B8A5;
             border-radius: 8px;
-            margin: 30px;
+            margin: 20px;
             padding: 8px 20px;
             font-size: 20px;
             font-weight: bold;

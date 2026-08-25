@@ -12,11 +12,13 @@ function Carrito() {
   return (
     <div className='carrito'>
       <div className="header-carrito">
-        <h2>Carrito</h2>
+        <h2>Carrito </h2>
         {cantidadItems ? <p>TOTAL A PAGAR ${montoTotal} ({cantidadItems} items)</p> : <p>(Vacío)</p>}
       </div>
       <div className="body-carrito">
-          <CardCarrito></CardCarrito>
+        {cart.map(item => (
+          <CardCarrito key={`${item.id}-${item.variedad}`} item={item}/>))
+        }
       </div>
       {cantidadItems ? 
         <div className='div-botones'>

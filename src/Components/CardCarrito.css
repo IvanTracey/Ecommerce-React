@@ -1,11 +1,11 @@
 .div-carrito{
     .card-carrito{
-        background-color: #A8B8A5;
+        background-color: #bbd9b6;
         box-shadow: 0 4px 12px rgba(0,0,0,0.6);
         border-radius: 28px;
         margin: 20px 25px;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         .imagen{     
             height: auto;
@@ -16,20 +16,18 @@
             border-radius: 18px;
         }
         .info{
-            justify-items: left;
-            width: 30%;
             h2{
-                font-size: 26px;
+                font-size: 30px;
                 margin: 25px;
             }
             p{
-                font-size: 20px;
+                font-size: 24px;
                 margin: 10px;
             }
         }
         h4{
             margin: 10px 30px;
-            font-size: 25px;
+            font-size: 26px;
         }
         
     }

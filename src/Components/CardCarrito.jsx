@@ -1,15 +1,12 @@
-import { useContext } from 'react'
 import './CardCarrito.css'
-import { CartContext } from '../context/CartContext'
 
-function CardCarrito(){
-    const {cart} = useContext(CartContext)
+function CardCarrito({item}){
     return (
         <div className='div-carrito'>
-        {cart.map(item => (
             <div className='card-carrito'>
                 <img src={`/${item.img}`} alt="Imagen producto" className='imagen'/>
-                <div className="info" key={`${item.id}-${item.variedad}`}>
+                
+                <div className="info">
                     <h2>{item.nombre}</h2>
                     {item.variedad ? <p>Variedad: {item.variedad} </p> : ""}
                     <p>Precio: ${item.precio}</p>
@@ -17,7 +14,6 @@ function CardCarrito(){
                 </div>
                 <h4>Precio total: ${item.cantidad*item.precio}</h4>
             </div>
-        ))}
         </div>
     )
 }
