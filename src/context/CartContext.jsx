@@ -28,7 +28,6 @@ export const CartProvider = ({ children }) => {
         producto
       ];
     });
-    {console.log(cart)}
   };
 
   const quitarDelCarrito = (id, variedad) => {
@@ -36,6 +35,15 @@ export const CartProvider = ({ children }) => {
       prevCart.filter(item => !(item.id === id && item.variedad === variedad))
     );
   };
+
+    const modificarCantidad = (id, variedad) => {
+      const productoExistente = prevCart.filter(item => {
+        return {
+          ...item,
+          cantidad: item.cantidad
+        };
+      }
+    )}
 
   const vaciarCarrito = () => {
       setCart([]);
