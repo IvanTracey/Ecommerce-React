@@ -1,12 +1,14 @@
-.lista{
-    font-weight: bold;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    .item{
-        text-decoration: none;
-        padding: 15px;
-        font-size: 20px;
-        color: black;
+.div-navbar{
+    margin: 15px;
+    .lista{
+        font-weight: bold;
+        display: flex;
+        gap: 5px;
+        .item{
+            text-decoration: none;
+            padding: 15px;
+            font-size: 20px;
+            color: black;
+        }
     }
 }

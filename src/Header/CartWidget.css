@@ -1,0 +1,9 @@
+.div-widget{
+    .badge-carrito {
+        background-color: #dc3545;
+        color: white;
+        border-radius: 50%;
+        padding: 2px 8px;
+        font-size: 0.8rem;
+    }
+}

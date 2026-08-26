@@ -10,6 +10,8 @@ import Error404 from './Pages/Error404.jsx'
 import './App.css'
 import Productos from './Pages/Productos.jsx'
 
+
+
 function App() {
   
   return (
@@ -23,6 +25,7 @@ function App() {
         <Route path='/*' element={<Error404/>}></Route>
       </Routes>
     <Footer></Footer>
+    
     </>
   )
 }
