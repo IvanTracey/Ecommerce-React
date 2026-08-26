@@ -2,12 +2,26 @@ import { useEffect, useState } from "react";
 import '../../data/productos.json'
 import ItemList from "./ItemList";
 import Paginacion from "./Paginacion";
+import {db} from "../Firebase/firebaseConfigure"
+import { collection, getDocs } from "firebase/firestore";
 
 function ItemListContainer({ categoriaSeleccionada }) {
   const [productos, setProductos] = useState([]);
+  useEffect( () => {
+    async function fetchProductos() {
+      const productosCollection = collection(db, "productos")
+      const productosSnapshot = await getDocs(productosCollection) 
+      const productosList = productosSnapshot.docs.map(
+        doc => ({id: doc.id, ...doc.data()}))
+      setProductos(productosList)
+    }
+    fetchProductos()
+  }, [])
+  /*
+  const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
+*/
   //Parametros de la paginacion
   const [pagina, setPagina] = useState(1);
   const porPagina = 9;
@@ -16,7 +30,7 @@ function ItemListContainer({ categoriaSeleccionada }) {
   useEffect(() => {
     setPagina(1);
   }, [categoriaSeleccionada]);
-
+/*
 // Funcion que obtiene el array de productos
   useEffect(() => {
     fetch('../../data/productos.json')
@@ -31,9 +45,10 @@ function ItemListContainer({ categoriaSeleccionada }) {
       });
     }, []);
 
-    if (loading) return <p>Cargando producos...</p>;
+    if (loading) return <p>Cargando productos...</p>;
     if (error) return <p>Error al cargar los productos</p>;
 
+*/
   const productosFiltrados = categoriaSeleccionada === "Todos"
     ? productos : productos.filter(p => p.categoria.includes(categoriaSeleccionada));
 
