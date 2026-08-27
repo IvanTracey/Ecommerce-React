@@ -1,6 +1,5 @@
 [
     {
-    "id":1,
     "nombre":"Agua de florida 60ml",
     "img": "img/aguas de florida.webp",
     "descripcion": "Producto artesanal, de las sierras cordobesas",
@@ -9,7 +8,6 @@
     "categoria": ["Aromas", "Manifestación"]
     },
     {
-    "id":2,
     "nombre":"Agua de florida 100ml",
     "img": "img/aguas de florida.webp",
     "descripcion": "Producto artesanal, de las sierras cordobesas",
@@ -18,7 +16,6 @@
     "categoria": ["Aromas", "Manifestación"]
     },
     {
-    "id":3,
     "nombre":"Difusor 100ml",
     "img": "img/difusores.webp",
     "descripcion": "Producto artesanal cordobes",
@@ -27,7 +24,6 @@
     "variedades": [{"nombre": "Mirra", "stock": 2}, {"nombre": "Sandalo", "stock": 1}]
     },
     {
-    "id":4,
     "nombre":"Colgante de flor de loto",
     "img": "img/colgantes.webp",
     "descripcion": "Disco para colgar, 16cm diametro",
@@ -36,7 +32,6 @@
     "categoria": ["Adornos"]
     },
     {
-    "id":5,
     "nombre":"Sahumerios artesanales",
     "img": "img/sahumerios_artesanales.webp",
     "descripcion": "20cm de largo, 10 unidades",
@@ -45,7 +40,6 @@
     "variedades": [{"nombre": "Almizcle y benjui", "stock": 2}, {"nombre": "Citrus", "stock": 1},{"nombre": "Lavanda", "stock": 2}, {"nombre": "Melisa", "stock": 1},{"nombre": "Mirra", "stock": 2}, {"nombre": "Nag champa", "stock": 1},{"nombre": "Romero", "stock": 2}, {"nombre": "Sandalo", "stock": 1}, {"nombre": "Vainilla y coco", "stock": 1},{"nombre": "Verbena", "stock": 2}, {"nombre": "Verbena y melisa", "stock": 1}]
     },
     {
-    "id":6,
     "nombre":"Sahumerios importados",
     "img": "img/sahumerios_importados.webp",
     "descripcion": "30cm de largo, 15 unidades",
@@ -54,7 +48,6 @@
     "variedades": [{"nombre": "Atrae clientes", "stock": 2}, {"nombre": "Atrae dinero", "stock": 1},{"nombre": "Black ice", "stock": 2}, {"nombre": "Citronella", "stock": 1},{"nombre": "Cool water", "stock": 2}, {"nombre": "Fresa", "stock": 1},{"nombre": "Lavanda", "stock": 2}, {"nombre": "Lick me all over", "stock": 1}, {"nombre": "Limpia hogar", "stock": 1},{"nombre": "Manzana canela", "stock": 2}, {"nombre": "Meditacion", "stock": 1},{"nombre": "Om", "stock": 2}, {"nombre": "Palo santo", "stock": 1}, {"nombre": "Rosa roja", "stock": 1},{"nombre": "Rosa vainilla", "stock": 2}, {"nombre": "Sandalo", "stock": 1}]
     },
     {
-    "id":7,
     "nombre":"Sahumerios importados",
     "img": "img/sahumerios_importados.webp",
     "descripcion": "50cm de largo, 10 unidades",
@@ -63,7 +56,6 @@
      "variedades": [{"nombre": "Almizcle", "stock": 2}, {"nombre": "Atrae dinero", "stock": 1},{"nombre": "Black ice", "stock": 2}, {"nombre": "Canela", "stock": 1},{"nombre": "Citronella", "stock": 2}, {"nombre": "Coco", "stock": 1},{"nombre": "Fresa", "stock": 2}, {"nombre": "Jazmin", "stock": 1}, {"nombre": "Lavanda", "stock": 1}, {"nombre": "Limpia hogar", "stock": 2}, {"nombre": "Meditacion", "stock": 1}, {"nombre": "Mirra", "stock": 2}, {"nombre": "Om", "stock": 2}, {"nombre": "Palo santo", "stock": 1}, {"nombre": "Sandalo", "stock": 1}]
     },
     {
-    "id":8,
     "nombre":"Sahumo mediano",
     "img": "img/sahumos.webp",
     "descripcion": "Hecho con hierbas naturales, Xgr",
@@ -72,7 +64,6 @@
     "variedades": [{"nombre": "Cedron", "stock": 1},{"nombre": "Laurel", "stock": 2}, {"nombre": "Lavanda", "stock": 1}, {"nombre": "Pino alimonado y mandarina", "stock": 2}, {"nombre": "Pino alimonado y naranja", "stock": 2}, {"nombre": "Romero", "stock": 1}, {"nombre": "Salvia", "stock": 1}]
     },
     {
-    "id":9,
     "nombre":"Sahumo grande",
     "img": "img/sahumo_romero.webp",
     "descripcion": "Hecho con Romero natural, Xgr",
@@ -81,7 +72,6 @@
     "categoria": "Defumación"
     },
     {
-    "id":10,
     "nombre":"Velas 7 chackras",
     "img": "img/vela.webp",
     "descripcion": "Velas de hornillo aromaticas ",
@@ -90,7 +80,6 @@
     "categoria": ["Aromas","Velas"]
     },
     {
-    "id":11,
     "nombre":"Velas aromaticas 4.5cm",
     "img": "img/vela_lata.webp",
     "descripcion": "Lata de mandala 4.5cm",
@@ -99,7 +88,6 @@
     "variedades": [{"nombre": "Jazmin", "stock": 1}, {"nombre": "Lavanda", "stock": 1}, {"nombre": "Vainilla africana", "stock": 1}]
     },
     {
-    "id":12,
     "nombre":"Velas aromaticas 6.5cm",
     "img": "img/velas.webp",
     "descripcion": "Lata de mandala 4.5cm",
@@ -108,7 +96,6 @@
     "variedades": [{"nombre": "Jazmin", "stock": 1}, {"nombre": "Lavanda", "stock": 1}, {"nombre": "Vainilla africana", "stock": 1}]
     },
     {
-    "id":13,
     "nombre":"Portavela flor",
     "img": "img/portavela_flor.webp",
     "descripcion": "Flor de yeso para vela de hornillo",
@@ -117,7 +104,6 @@
     "categoria": ["Adornos","Portavelas"]
     },
     {
-    "id":14,
     "nombre":"Portavela mano de fatima",
     "img": "img/portavela_mano.webp",
     "descripcion": "Mano de fatima de yeso",
@@ -126,7 +112,6 @@
     "categoria": ["Adornos","Portavelas"]
     },
     {
-    "id":15,
     "nombre":"Portasahumerios mano de fatima",
     "img": "img/portasahumerio_mano.webp",
     "descripcion": "Mano de fatima de yeso",
@@ -135,7 +120,6 @@
     "categoria": ["Adornos","Portasahumerios"]
     },
     {
-    "id":16,
     "nombre":"Rosario sagrado",
     "img": "img/rosario_sagrado.webp",
     "descripcion": "Rosario hindú para manifestar los códigos sagrados de Agesta",
@@ -144,7 +128,6 @@
     "categoria": ["Manifestación"]
     },
     {
-    "id":17,
     "nombre":"Portavelas para cuatro",
     "img": "img/portavela_para4.webp",
     "descripcion": "Portavela de yeso, variedad de colores",
@@ -153,7 +136,6 @@
     "categoria": ["Adornos", "Portavelas"]
     },
     {
-    "id":18,
     "nombre":"Portavelas para dos",
     "img": "img/portavela_para2.webp",
     "descripcion": "Portavela de yeso, variedad de colores",
@@ -162,7 +144,6 @@
     "categoria": ["Adornos", "Portavelas"]
     },
     {
-    "id":19,
     "nombre":"Bolsas aromaticas",
     "img": "img/bolsas_aromaticas.webp",
     "descripcion": "Bolsitas de lavanda, 2 unidades",
@@ -171,7 +152,6 @@
     "categoria": ["Aromas"]
     },
     {
-    "id":20,
     "nombre":"Piedras 7 arcangeles",
     "img": "img/piedras_7arcangeles.webp",
     "descripcion": "Lapislazuli, citrino, calcita, cuarzo cristal, aventurita, cornalita, amatista",
@@ -180,7 +160,6 @@
     "categoria": ["Manifestación", "Piedras"]
     },
     {
-    "id":21,
     "nombre":"Kit piedras autoestima",
     "img": "img/piedras_autoestima.webp",
     "descripcion": "Cuarzo rosa, cuarzo cristal, cornalita",
@@ -189,7 +168,6 @@
     "categoria": ["Manifestación", "Piedras"]
     },
     {
-    "id":22,
     "nombre":"Kit piedras salud",
     "img": "img/piedras_salud.webp",
     "descripcion": "Cuarzo verde, cuarzo cristal, cuarzo ahumado",
@@ -198,7 +176,6 @@
     "categoria": ["Manifestación", "Piedras"]
     },
     {
-    "id":23,
     "nombre":"Kit piedras prosperidad",
     "img": "img/piedras_prosperidad.webp",
     "descripcion": "Citrino, pirita, ojo de tigre",
@@ -207,7 +184,6 @@
     "categoria": ["Manifestación", "Piedras"]
     },
     {
-    "id":24,
     "nombre":"Portavela con portasahumerio",
     "img": "img/portasahumerio_portavela.webp",
     "descripcion": "De yeso, variedad de colores",
@@ -216,7 +192,6 @@
     "categoria": ["Portasahumerios", "Portavelas"]
     },
     {
-    "id":25,
     "nombre":"Portavela",
     "img": "img/portavela_lata.webp",
     "descripcion": "De yeso, 6cmx6cm",

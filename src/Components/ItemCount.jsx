@@ -42,7 +42,7 @@ function ItemCount({ producto, variedad, stock }) {
       {!productoEnCarrito ? <button onClick={agregarCarrito} className="agregar-carrito">Agregar al carrito</button> :
         <div>
           <div className='div-botonera'>  
-            <button className='boton' onClick={restarProducto}  disabled={productoEnCarrito.cantidad === 1}>- </button>
+            <button className='boton' onClick={restarProducto}  disabled={productoEnCarrito.cantidad === 1}> - </button>
             <p>{productoEnCarrito.cantidad}</p>
             <button className='boton' onClick={sumarProducto} disabled={productoEnCarrito.cantidad === stock}> + </button>
           </div>
