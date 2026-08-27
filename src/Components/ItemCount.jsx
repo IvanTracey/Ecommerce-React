@@ -27,8 +27,8 @@ function ItemCount({ producto, variedad, stock }) {
   };
 
   const restarProducto = () => {
-    const nuevaCantidad = productoEnCarrito.cantidad + 1;
-    if (nuevaCantidad <= 1) {
+    const nuevaCantidad = productoEnCarrito.cantidad - 1;
+    if (nuevaCantidad  >= 1) {
       modificarCantidad(producto.id, variedad, nuevaCantidad)
     }
   };
