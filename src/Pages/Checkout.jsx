@@ -37,7 +37,7 @@ function Checkout() {
         id: item.id,
         nombre: item.nombre,
         precio: item.precio,
-        variedad: item.variedad,
+        variedad: item.variedad ?? null,
         cantidad: item.cantidad
       }));
       const orden = {
@@ -72,6 +72,7 @@ function Checkout() {
         vaciarCarrito();
       }
     };
+
     // Si se ejecuto la compra, cartel
     if (ordenCreada) {
       return (
