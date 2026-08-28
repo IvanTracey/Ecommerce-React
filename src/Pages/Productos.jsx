@@ -1,27 +1,40 @@
 import { Link, useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import './Productos.css'
+import {db} from "../firebase/firebaseConfigure"
+import { doc, getDoc } from "firebase/firestore";
+import OrbitProgress from "react-loading-indicators/OrbitProgress";
 
 function Productos() {
   const { id } = useParams();
-  const [producto, setProducto] = useState(null);
+  const [producto, setProducto] = useState([])
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    fetch('../data/productos.json')
-      .then(res => res.json())
-      .then(data => {
-        const encontrado = data.find(p => p.id === id || p.id === Number(id));
-        setProducto(encontrado ?? null);
-        setLoading(false);
-      })
-      .catch(err => { setError(err); setLoading(false); });
-  }, [id]);   //si el id cambia (yendo de un producto a otro), refetchea
-
-  if (loading) return <p>Cargando producto...</p>;
-  if (error) return <p>Error al cargar el producto</p>;
+  useEffect(() => {const obtenerProducto = async () => {
+    try {
+      const referencia = doc(db, "productos", id );
+      const resultado = await getDoc(referencia);
+      // Si existe producto con ID ingresado, trae solo ese producto de la db
+      if (resultado.exists()) {
+          setProducto({
+            //el ID no esta dentro de la informacion, uso ID automatico
+            id: resultado.id,
+            ...resultado.data()
+          });
+      } else {
+        setProducto(null);
+      }
+    } catch (err) {
+        setError(err);
+    } finally {
+      setLoading(false);}
+    };
+    obtenerProducto();
+  }, [id]);
   if (!producto) return <p>Producto no encontrado</p>;
+  if (loading) return <OrbitProgress variant="spokes" color="#6ec26e" size="medium" text="" textColor="" />;
+  if (error) return <p>{error}</p>;
 
   return (
     <div className='div-producto-id'>
