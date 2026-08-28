@@ -34,8 +34,7 @@ function ItemListContainer({ categoriaSeleccionada }) {
           id: doc.id, 
           ...doc.data()
         }))
-        setProductos(productosList)
-        console.log(categoriaSeleccionada)
+        setProductos(productosList.sort((a, b) => a.nombre.localeCompare(b.nombre)))
       } catch (err){
         setError("No se pudieron cargar los productos")
       } finally{
