@@ -9,11 +9,17 @@ function Footer(){
         <p>Política de privacidad</p>
         <p>Términos y condiciones</p>
       </div>
-      <div className='div-redes'>
-        <img src="../../img/logo_fb.png" alt="logo facebook" className='logo'/>
-        <img src="../../img/logo_ig.png" alt="logo instagram" className='logo' />
-        <img src="../../img/logo_wa.png" alt="logo whats app" className='logo' />
-      </div>
+      <nav>
+        <ul> 
+          <li>
+            <a href="https://www.instagram.com/diezpuntos.lp/" target="_blank" rel="noopener noreferrer"> 
+              <img src="img/logo_ig.png" alt="Icono de Instagram" class="social-icon"></img>
+            </a>  
+          </li>
+          <li><a href="https://www.facebook.com/diezpuntos.lp/" target="_blank" rel="noopener noreferrer"> <img src="img/logo_fb.png" alt="Icono de Facebook" class="social-icon"></img></a>  </li>
+          <li><a href="https://wa.me/5492355411161" target="_blank" rel="noopener noreferrer"> <img src="img/logo_wa.png" alt="Icono de WhatsApp" class="social-icon"></img></a></li>   
+        </ul>
+      </nav>
     </div>
   )
 }

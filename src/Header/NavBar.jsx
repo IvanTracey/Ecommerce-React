@@ -10,7 +10,6 @@ const NavBar = () => {
                     <Link to={"/"} className='item'>Catalogo</Link>
                 </il>
                 <Link to={"/carrito"} className='item'><CartWidget></CartWidget></Link>
-                
                 <il>
                     <Link to={"checkout"} className='item'>Checkout</Link>
                 </il>

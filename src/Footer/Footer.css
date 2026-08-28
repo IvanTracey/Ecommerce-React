@@ -10,12 +10,19 @@
         padding: 10px 30px;
 
     }
-    .div-redes{
-        display: flex;
+    nav{
         padding-right: 30px;
-        .logo{
-            height: 40px;
-            padding: 10px;
+        ul{
+            display: flex;
+            li{
+                list-style: none;
+                .social-icon{
+                    height: 40px;
+                    padding: 10px;            
+                    transition: transform 0.4s ease; }
+                    &:hover{transform: scale(1.05);}
+                }
+            }
         }
     }
 }

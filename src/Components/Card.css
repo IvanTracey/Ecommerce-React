@@ -7,13 +7,16 @@
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     transition: transform 0.4s ease; 
+    &:hover{
+        transform: scale(1.05);
+    }
     .link{
         .card-img{
             height: auto;
             width: 100%;
             aspect-ratio: 1/1; 
             object-fit: cover;
-            border-radius: 1px;
+            border-radius: 12px;
         }
             height: 55px;
             text-decoration: none;
@@ -32,8 +35,10 @@
             height: 25px;
             background-color: #A8B8A5;
             border-radius: 8px;
-            &:hover{transform: scale(1.05);}
-        }
+            transition: transform 0.4s ease; }
+            &:hover{
+                transform: scale(1.05);
+            }
     }
     .div-estilos{
         margin: 10px;

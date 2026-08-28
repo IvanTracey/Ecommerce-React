@@ -1,9 +1,10 @@
 .div-navbar{
-    margin: 15px;
+    margin: 10px 25px;
     .lista{
         font-weight: bold;
         display: flex;
         gap: 5px;
+        align-items: center;
         .item{
             text-decoration: none;
             padding: 15px;
